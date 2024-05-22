@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <%= link_to("Add a restaurant", root_path, class:'btn btn-info') %>
+
+  <div id="restaurants">
+  <h3>our restors (all)</h3>
+    <%= render "restaurants/list", restaurants: @restaurants %>
+  </div>
+
+  <div>
+  <h3>Our last added</h3>
+  <%= render "restaurants/list", restaurants: @best_restaurants %>
+  </div>
+</div>
